@@ -6,4 +6,7 @@ services:
       - "80:80"
     volumes:
     - ./src:/usr/share/nginx/html
-    - ./nginx-data/nginx.conf:/etc/nginx/nginx.conf:ro
+    - nginx-data:/etc/nginx
+volumes:
+  nginx-data:
+    name: nginx-data
